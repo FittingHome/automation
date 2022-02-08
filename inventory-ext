@@ -1,0 +1,36 @@
+[all:vars]
+ansible_user='to specify'
+ansible_become=yes
+ansible_become_method=sudo
+ansible_python_interpreter='/usr/bin/env python3'
+ansible_connection=ssh
+ansible_connection_port=22
+
+[business]
+business.fittinghome.fr
+
+[dbservers]
+database.fittinghome.fr
+
+[deploy]
+deploy.fittinghome.fr
+
+[home]
+home.fittinghome.fr
+
+[wiki]
+wiki.fittinghome.fr
+
+[reverse-proxy]
+192.168.1.17
+
+[localips]
+192.168.1.44 ansible_port=22001
+192.168.1.45 ansible_port=22004
+192.168.1.46 ansible_port=22002
+192.168.1.47 ansible_port=22003
+192.168.1.39
+192.168.1.17
+
+[test]
+192.168.1.47 ansible_port=22003
