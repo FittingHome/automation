@@ -1,0 +1,14 @@
+---
+- name: Ansible Create user functionlity module demo
+  hosts: test 
+  become_user: root # Using root user as ubuntu sudoers to get elevation
+  tasks:
+    - name: Add the user 'x' with a specific uid and a primary group of 'sudo'
+    # U need to specify a inventory file or replace x by hand to precise user's name
+      ansible.builtin.user:
+        name: x
+        comment: x
+        uid: 1077 # Need to be different from existing UID
+        group: sudo
+        createhome: yes        # Defaults to yes
+        home: /home/x    # Defaults to /home/<username> with username to change in path
