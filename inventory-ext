@@ -24,6 +24,9 @@ wiki.fittinghome.fr
 [reverse-proxy]
 192.168.1.17
 
+[tester]
+192.168.1.36
+
 [localips]
 192.168.1.44 ansible_port=22001
 192.168.1.45 ansible_port=22004
@@ -31,6 +34,7 @@ wiki.fittinghome.fr
 192.168.1.47 ansible_port=22003
 192.168.1.39
 192.168.1.17
+192.168.1.36
 
 [test]
 192.168.1.47 ansible_port=22003
